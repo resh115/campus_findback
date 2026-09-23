@@ -1,0 +1,8 @@
+{
+  "name":"findback-final-ai",
+  "version":"1.0.0",
+  "private":true,
+  "type":"module",
+  "scripts":{"start":"node server.js","dev":"node --watch server.js","check":"node --check server.js && node --check public/js/app.js && node --check services/matching.js"},
+  "dependencies":{"@aws-sdk/client-s3":"^3.879.0","cors":"^2.8.5","dotenv":"^17.2.2","express":"^5.1.0","firebase-admin":"^13.5.0","groq-sdk":"^0.29.0","multer":"^2.0.2","pdfkit":"^0.17.2","uuid":"^11.1.0"}
+}
