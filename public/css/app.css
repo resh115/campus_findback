@@ -46,7 +46,13 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;background:ra
 .print-only{display:none}
 @media print{body{background:#fff;color:#111;font-family:Arial,sans-serif}body::before,.ambient-dots,.side,.mobile-nav,.top,.actions,.toolbar,.assistant,.scroll-top,.toast,.btn{display:none!important}.shell,.main{display:block;margin:0;width:100%;padding:0}.card,.hero{background:#fff;border:1px solid #bbb;box-shadow:none;color:#111;break-inside:avoid}.muted{color:#444}.badge{color:#111!important;background:#eee!important;border-color:#999!important}.print-only{display:block}}
 .assistant{position:fixed;right:24px;bottom:82px;z-index:12}
-.assistant-toggle{width:50px;height:50px;border:1px solid #aaaec4;border-radius:50%;background:linear-gradient(135deg,#f0f2f6,#aab1c2);color:#1b1d32;font-size:13px;font-weight:800;box-shadow:0 8px 24px rgba(0,0,0,.35);cursor:pointer}
+.assistant-toggle{width:56px;height:56px;border:2px solid #38bdf8;border-radius:50%;background:radial-gradient(circle at 35% 35%,#22234b 0%,#0d0e21 100%);display:flex;align-items:center;justify-content:center;padding:0;box-shadow:0 0 18px rgba(56,189,248,.4),0 8px 24px rgba(0,0,0,.45);cursor:pointer;transition:transform .25s cubic-bezier(.34,1.56,.64,1),box-shadow .25s ease,border-color .25s ease;overflow:hidden;position:relative}
+.assistant-toggle:hover{transform:scale(1.1) translateY(-2px);border-color:#67e8f9;box-shadow:0 0 26px rgba(56,189,248,.65),0 12px 30px rgba(0,0,0,.55)}
+.assistant-toggle:active{transform:scale(.95)}
+.assistant-bot-icon{width:46px;height:46px;object-fit:contain;display:block;pointer-events:none;filter:drop-shadow(0 2px 5px rgba(0,0,0,.5));transition:transform .25s ease}
+.assistant-toggle:hover .assistant-bot-icon{transform:scale(1.06)}
+.assistant-head strong{display:inline-flex;align-items:center;gap:8px;font-size:15px}
+.assistant-head-icon{width:24px;height:24px;object-fit:contain;display:inline-block;vertical-align:middle}
 .assistant-panel{position:absolute;right:0;bottom:62px;width:min(360px,calc(100vw - 32px));background:#111126;border:1px solid #3c3c64;border-radius:12px;box-shadow:0 18px 50px rgba(0,0,0,.5);overflow:hidden;opacity:0;pointer-events:none;transform:translateY(10px);transition:opacity .2s ease,transform .2s ease}
 .auth-page{position:relative;isolation:isolate;min-height:100vh;overflow:hidden;background:radial-gradient(circle at 50% 42%,#171741 0,#0d0d29 48%,#07071a 100%);padding:32px 20px}
 .auth-page::before{content:"";position:absolute;inset:0;z-index:-2;opacity:.35;background-image:radial-gradient(circle at 20% 30%,#714cff 0 1px,transparent 2px),radial-gradient(circle at 80% 68%,#ff5bb4 0 1px,transparent 2px);background-size:26px 26px,34px 34px}
@@ -76,3 +82,17 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;background:ra
 .assistant-form input{min-width:0;flex:1;background:#0c0c1b;color:#fff;border:1px solid var(--line);border-radius:7px;padding:9px}
 .assistant-form .btn{padding:8px 11px}
 @media(max-width:760px){.assistant{right:16px;bottom:72px}}
+.admin-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
+.admin-tabs .btn{background:#171735;border-color:var(--line)}
+.admin-tabs .btn.primary{background:linear-gradient(135deg,#7756ff,#5b39df);border-color:#8066ff}
+.table-container{overflow-x:auto;padding:0}
+.admin-table{width:100%;border-collapse:collapse;font-size:13px;text-align:left}
+.admin-table th{background:rgba(23,23,53,.7);padding:12px 14px;color:var(--muted);font-weight:600;border-bottom:1px solid var(--line);white-space:nowrap}
+.admin-table td{padding:12px 14px;border-bottom:1px solid rgba(255,255,255,.05);vertical-align:middle}
+.admin-table tr:hover td{background:rgba(255,255,255,.02)}
+.admin-table code{background:#0a0a1a;padding:2px 6px;border-radius:4px;color:#c8c3ff;font-size:12px}
+.audit-ua{max-width:280px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.user-modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.75);backdrop-filter:blur(6px);display:grid;place-items:center;padding:20px;z-index:999}
+.user-modal{width:min(720px,100%);max-height:88vh;overflow-y:auto;background:#111126;border:1px solid #3c3c64;border-radius:12px;padding:24px;box-shadow:var(--shadow)}
+.user-reports-list,.user-logins-list{display:grid;gap:8px;margin-top:10px}
+
